@@ -2,7 +2,7 @@ const { response } = require("express");
 var username;
 
 function getusername() {
-    const f = fetch('http://localhost:3001/user-name');
+    const f = fetch('/user-name');
     f.then(response => response.json()).then((json) => {
         username = json.name;
         document.getElementById('name').innerHTML = "(" + username + ")";
@@ -10,7 +10,7 @@ function getusername() {
 }
 
 function signin() {
-    const url = 'http://localhost:3001/signin';
+    const url = '/signin';
 
     let username = document.getElementById('name').value;
     let password = document.getElementById('password').value;
@@ -34,10 +34,10 @@ function signin() {
             //do something awesome that makes the world a better place
             let response = json.msg;
             if (response == 'owner') {
-                window.location.replace("http://localhost:3001/owner");
+                window.location.replace("/owner");
             }
             else if (response == 'coworker') {
-                window.location.replace("http://localhost:3001/coworker");
+                window.location.replace("/coworker");
             } else {
                 alert(response);
             }
@@ -48,7 +48,7 @@ function signin() {
 var obj_property;
 
 function property_data(sort) {
-    const f = fetch('http://localhost:3001/property-data');
+    const f = fetch('/property-data');
     f.then(Response => Response.json())
         .then((data) => {
 
@@ -84,9 +84,9 @@ function lists() { // lists of property on owner page
                     </ul></small>
                     </p>
                     <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-primary" onclick="location.href='http://localhost:3001/property-modify?name=${element.name}'">Add workspace</button>
-                        <button type="button" class="btn btn-sm btn-warning" onclick="location.href='http://localhost:3001/property-add?name=${element.name}'">Modify</button>
-                        <button type="button" class="btn btn-sm btn-danger" onclick="location.href='http://localhost:3001/property-delete/${element.name}'">Delete</button>
+                        <button type="button" class="btn btn-sm btn-primary" onclick="location.href='/property-modify?name=${element.name}'">Add workspace</button>
+                        <button type="button" class="btn btn-sm btn-warning" onclick="location.href='/property-add?name=${element.name}'">Modify</button>
+                        <button type="button" class="btn btn-sm btn-danger" onclick="location.href='/property-delete/${element.name}'">Delete</button>
                     </div>
                 </div>
             </div>
@@ -102,7 +102,7 @@ var obj_workspace;
 
 function workspace_data(property, user) {
     if (property != null) {
-        const f = fetch('http://localhost:3001/workspace-data/' + property);
+        const f = fetch('/workspace-data/' + property);
         f.then(Response => Response.json())
             .then((data) => {
 
@@ -141,8 +141,8 @@ function list_workspace(property, user) { // lists of workspace as table on deta
                 <i class="text-success">${element.price} CAD</i>
                     </td>`
         if (user == "owner") {
-            lists += `<td><button type="button" class="btn btn-sm btn-outline-warning" onclick="location.href='http://localhost:3001/property-modify?name=${property}&workspace=${id}'">Modify</button>
-                        <button type="button" class="btn btn-sm btn-outline-danger" onclick="location.href='http://localhost:3001/workspace-delete/${property}/${id}'">Delete</button>`
+            lists += `<td><button type="button" class="btn btn-sm btn-outline-warning" onclick="location.href='/property-modify?name=${property}&workspace=${id}'">Modify</button>
+                        <button type="button" class="btn btn-sm btn-outline-danger" onclick="location.href='/workspace-delete/${property}/${id}'">Delete</button>`
         }
 
         lists += `</tr>`
@@ -156,7 +156,7 @@ function list_workspace(property, user) { // lists of workspace as table on deta
 
 function workspace_all(filter) { // lists of workspace on coworker page
 
-    const f = fetch('http://localhost:3001/workspace-data');
+    const f = fetch('/workspace-data');
     f.then(Response => Response.json())
         .then((data) => {
 
@@ -234,7 +234,7 @@ function workspace_all(filter) { // lists of workspace on coworker page
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title text-primary"><a href="http://localhost:3001/property-view?name=${element.property}">${element.type}</a></h5>
+        <h5 class="card-title text-primary"><a href="/property-view?name=${element.property}">${element.type}</a></h5>
         <p class=""><small><b>${element.property}</b> - ${element.neighborhood} - (${element.squarefeet} sqft.)<br>${element.address}</small></p>
         <p class="card-text"><small>
         Available on ${element.date}<br>
