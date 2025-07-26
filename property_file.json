@@ -1,0 +1,167 @@
+{
+  "property": [
+    {
+      "name": "sss",
+      "address": "aaa11",
+      "squarefeet": "1",
+      "neighborhood": "Major Park",
+      "parking": "false",
+      "public_transportation": "false"
+    },
+    {
+      "name": "1",
+      "address": "2",
+      "squarefeet": "3",
+      "neighborhood": "Downtown",
+      "parking": "false",
+      "public_transportation": "true"
+    },
+    {
+      "name": "Building1",
+      "address": "1234 NE AB",
+      "squarefeet": "200",
+      "neighborhood": "Residential",
+      "parking": "true",
+      "public_transportation": "true"
+    },
+    {
+      "name": "The Bow",
+      "address": "500 Centre St S, Calgary, AB T2G 0E3",
+      "squarefeet": "1050",
+      "neighborhood": "Downtown",
+      "parking": "true",
+      "public_transportation": "true",
+      "owner": "yosita",
+      "workspace": [
+        {
+          "type": "Meeting rooms",
+          "seats": "25",
+          "date": "2024-08-29",
+          "lease": "1",
+          "price": "99",
+          "smoking": "true",
+          "pet": "false",
+          "property": "The Bow",
+          "address": "500 Centre St S, Calgary, AB T2G 0E3",
+          "squarefeet": "1050",
+          "neighborhood": "Downtown",
+          "parking": "true",
+          "public_transportation": "true"
+        },
+        {
+          "type": "Private office rooms",
+          "seats": "7",
+          "date": "2024-09-05",
+          "lease": "5",
+          "price": "299",
+          "smoking": "true",
+          "pet": "false",
+          "property": "The Bow",
+          "address": "500 Centre St S, Calgary, AB T2G 0E3",
+          "squarefeet": "1050",
+          "neighborhood": "Downtown",
+          "parking": "true",
+          "public_transportation": "true"
+        }
+      ]
+    },
+    {
+      "name": "Suncor Energy",
+      "address": "150 6 Ave SW, Calgary, AB T2P 3E3",
+      "squarefeet": "230",
+      "neighborhood": "Downtown",
+      "parking": "true",
+      "public_transportation": "true",
+      "owner": "yosita",
+      "workspace": []
+    },
+    {
+      "name": "Bow Valley Square",
+      "address": "205 5 Ave SW, Calgary, AB T2P 2V7",
+      "squarefeet": "350",
+      "neighborhood": "Downtown",
+      "parking": "false",
+      "public_transportation": "true",
+      "owner": "yosita",
+      "workspace": []
+    },
+    {
+      "name": "Brookfield Place",
+      "address": "225 6 Ave SW, Calgary, AB T2P 3S9",
+      "squarefeet": "98",
+      "neighborhood": "Downtown",
+      "parking": "false",
+      "public_transportation": "true",
+      "owner": "owner",
+      "workspace": [
+        {
+          "type": "Desks in an open work area",
+          "seats": "1",
+          "date": "2024-08-31",
+          "lease": "5",
+          "price": "127",
+          "smoking": "false",
+          "pet": "false"
+        },
+        {
+          "type": "Meeting rooms",
+          "seats": "17",
+          "date": "2024-08-20",
+          "lease": "1",
+          "price": "68",
+          "smoking": "true",
+          "pet": "false"
+        }
+      ]
+    },
+    {
+      "name": "The Ampersand",
+      "address": "112 4 Ave SW, Calgary, AB T2P 3N3",
+      "squarefeet": "67",
+      "neighborhood": "Industrial",
+      "parking": "true",
+      "public_transportation": "true",
+      "owner": "test",
+      "workspace": [
+        {
+          "type": "Meeting rooms",
+          "seats": "1",
+          "date": "2024-08-31",
+          "lease": "1",
+          "price": "17",
+          "smoking": "false",
+          "pet": "false"
+        },
+        {
+          "type": "Private office rooms",
+          "seats": "1",
+          "date": "2024-08-30",
+          "lease": "1",
+          "price": "15",
+          "smoking": "false",
+          "pet": "false"
+        }
+      ]
+    },
+    {
+      "name": "Fifth Avenue Place",
+      "address": "420 2 St SW, Calgary, AB T2P 3K4",
+      "squarefeet": "130",
+      "neighborhood": "Major Park",
+      "parking": "true",
+      "public_transportation": "true",
+      "owner": "test",
+      "workspace": [
+        {
+          "type": "Meeting rooms",
+          "seats": "30",
+          "date": "2024-08-22",
+          "lease": "3",
+          "price": "1284",
+          "smoking": "true",
+          "pet": "true"
+        }
+      ]
+    }
+  ]
+}

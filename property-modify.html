@@ -1,0 +1,237 @@
+<!-- /**
+ * @name: Final Group Project.
+ * @Course Code: SODV1201
+ * @class: Software Development Diploma program.
+ * @author: 457647 - Yosita Jasamut
+ */ -->
+
+<!DOCTYPE html>
+
+<head>
+    <title>Perfect Workspace - Modify property</title>
+    <script src="script.js"></script>
+    <link href="bootstrap-5.3.3/dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: "Nunito", sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid container">
+                <a class="navbar-brand fw-bold fs-6 d-flex align-items-center text-primary" href="#"> <img
+                        src="icon6.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
+                    &nbspPerfect Workspace</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="http://localhost:3001/owner">Home</a>
+                        </li>
+                    </ul>
+                    <span class="navbar-text">
+                        <a class="nav-link text-danger" href="http://localhost:3001/signout">Sign out</a>
+                    </span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="pb-5">
+        <main>
+            <div class=" bg-dark text-white w-100">
+                <div class="container py-5">
+                    <h3 class="text-primary"><a id="propertyname"></a></h3>
+                    <p id="description" class="lead fs-6"><small><a id="address"></a><br><a id="neighborhood"></a>
+                            <ul class="">
+                                <li><a id="squarefeet"></a> sq ft</li>
+                                <li>Parking - <a id="parking"></a></li>
+                                <li>Public transportation - <a id="public_transportation"></a></li>
+                            </ul>
+                            <p>Contact :<a id="contact"></a></p>
+                        </small>
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-body-tertiary py-5">
+                <div class="container">
+                    <h4>Lists of Workspace</h4>
+                    <p class="fs-6 text-secondary">As an owner, I can modify the data for any of my properties or any of
+                        my workspaces.
+                        As an owner, I can delist any of my properties or any of my workspaces.
+                    </p>
+                    <div id="lists"></div>
+                </div>
+
+            </div>
+
+            <form class="needs-validation" id="myForm" novalidate action="http://localhost:3001/workspace-add"
+                method="post">
+                <input id="property" name="property" hidden>
+                <div class="bg-primary-subtle w-100" id="addworkspace">
+                    <div class="container py-5">
+                        <div class="row">
+                            <h4 class="mb-3">Add new workspace</h4>
+                            <p class="fs-6 text-secondary">As an owner, I can select one of my properties and list
+                                workspaces for
+                                rent. Workspaces could be
+                                meeting rooms, private office rooms, or desks in an open work area. For each
+                                workspace, I can specify
+                                how many individuals it can seat, whether smoking is allowed or not, availability
+                                date, lease term
+                                (day, week, or month), and price</p>
+                            <div class="col-md-7 col-lg-8">
+
+                                <div class="row g-3">
+                                    <div class="col-md-5">
+                                        <label for="country" class="form-label">Type of Workspace</label>
+                                        <select class="form-select" id="type" name="type" required>
+                                            <option value="">Choose...</option>
+                                            <option>Meeting rooms</option>
+                                            <option>Private office rooms</option>
+                                            <option>Desks in an open work area</option>
+                                            <option>Other</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please select a valid country.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <label for="address2" class="form-label">Seat(s)</label>
+                                        <input type="number" class="form-control" id="seats" name="seats"
+                                            placeholder="">
+                                    </div>
+                                    <div class="col-md-5">
+                                        <label for="address2" class="form-label">Availability date</label>
+                                        <input type="date" class="form-control" id="date" name="date" placeholder="">
+                                    </div>
+                                    <div class="col-md-5">
+                                        <label for="address2" class="form-label">Lease term (days)</label>
+                                        <input type="number" class="form-control" id="lease" name="lease"
+                                            placeholder="">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="address2" class="form-label">Price (CAD)</label>
+                                        <input type="number" class="form-control" id="price" name="price"
+                                            placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-md-5 col-lg-4">
+                                <h4 class="mb-3">Amenities</h4>
+
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="smoking" name="smoking">
+                                    <label class="form-check-label" for="same-address">Smoking</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="pet" name="pet">
+                                    <label class="form-check-label" for="save-info">Pet-friendly</label>
+                                </div>
+                            </div>
+
+
+                            <div class="mt-5">
+                                <button class="w-100 btn btn-primary btn-lg" type="submit">Add workspace</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </main>
+    </div>
+    <footer>
+        <div class="col text-center py-3">
+            <small class="text-primary">Developed by 457647 - Yosita Jasamut © 2024</small><br>
+            <small><i>Student of Software Development at Bow Valley College</i></small>
+        </div>
+    </footer>
+
+    <script src="bootstrap-5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const name = urlParams.get('name');
+        const workspace = urlParams.get('workspace');
+        // alert(name);
+        if (name != null) {
+            document.getElementById('propertyname').innerHTML = name;
+            document.getElementById('property').value = name;
+
+            const f = fetch('http://localhost:3001/property-data/' + name);
+            f.then(response => response.json()).then((json) => {
+                document.getElementById('address').innerHTML = json.address;
+                document.getElementById('squarefeet').innerHTML = json.squarefeet;
+                document.getElementById('neighborhood').innerHTML = json.neighborhood;
+
+                username = json.owner;
+                const f2 = fetch('http://localhost:3001/user-data/' + username);
+                f2.then(response2 => response2.json()).then((json2) => {
+
+                    // console.log(json2);
+                    contact += '<ul><li>Tel. ' + json2.phone + '</li><li>' + json2.email + '</li></ul>';
+                    document.getElementById('contact').innerHTML = contact;
+                });
+                // alert(json.parking);
+                parking = false;
+                if (json.parking == 'true') {
+                    parking = true;
+                }
+                public_transportation = false;
+                if (json.public_transportation == 'true') {
+                    public_transportation = true;
+                }
+                document.getElementById('parking').innerHTML = parking;
+                document.getElementById('public_transportation').innerHTML = public_transportation;
+
+                workspace_data(name, "owner");
+
+                if (workspace != null) {
+                    const f3 = fetch('http://localhost:3001/workspace-data/' + name + '/' + workspace);
+                    f3.then(response3 => response3.json()).then((json3) => {
+                        document.getElementById('type').value = json3.type;
+                        document.getElementById('seats').value = json3.seats;
+                        document.getElementById('date').value = json3.date;
+                        document.getElementById('lease').value = json3.lease;
+                        document.getElementById('price').value = json3.price;
+
+                        location.href = "#addworkspace";
+                        // alert(json.parking);
+                        pet = false;
+                        if (json3.pet == 'true') {
+                            pet = true;
+                        }
+                        smoking = false;
+                        if (json3.smoking == 'true') {
+                            smoking = true;
+                        }
+                        document.getElementById('pet').checked = pet;
+                        document.getElementById('smoking').checked = smoking;
+                        document.getElementById("myForm").action = "http://localhost:3001/workspace-modify/" + name + "/" + workspace;
+                    });
+                }
+            });
+
+        }
+
+    </script>
+</body>
+
+</html>

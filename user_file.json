@@ -1,0 +1,46 @@
+{
+  "user": [
+    {
+      "name": "owner",
+      "phone": "8756834219",
+      "email": "owner@mybvc.ca",
+      "password": "12345678",
+      "status": "owner"
+    },
+    {
+      "name": "coworker",
+      "phone": "7669066435",
+      "email": "coworker@mybvc.ca",
+      "password": "12345678",
+      "status": "coworker"
+    },
+    {
+      "name": "yosita",
+      "phone": "54655328",
+      "email": "y.jasamut647@mybvc.ca",
+      "password": "12345678",
+      "status": "owner"
+    },
+    {
+      "name": "sarah",
+      "phone": "6543988702",
+      "email": "sarah@perfectworkspace.ca",
+      "password": "12345678",
+      "status": "owner"
+    },
+    {
+      "name": "john",
+      "phone": "5437658896",
+      "email": "john@mybvc.ca",
+      "password": "12345678",
+      "status": "coworker"
+    },
+    {
+      "name": "test",
+      "phone": "7563298764",
+      "email": "test@mybvc.ca",
+      "password": "12345678",
+      "status": "owner"
+    }
+  ]
+}

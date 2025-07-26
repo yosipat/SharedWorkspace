@@ -1,0 +1,87 @@
+<!-- /**
+ * @name: Final Group Project.
+ * @Course Code: SODV1201
+ * @class: Software Development Diploma program.
+ * @author: 457647 - Yosita Jasamut
+ */ -->
+<!DOCTYPE html>
+
+<head>
+    <title>Perfect Workspace</title>
+    <script src="script.js"></script>
+    <link href="bootstrap-5.3.3/dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: "Nunito", sans-serif;
+        }
+
+        .bg {
+            background-image: url('bg4.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 0% 20%;
+        }
+
+        .blur {
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body class="bg">
+    <div class="blur">
+        <div class="container col-xl-10 col-xxl-8 px-4 py-2">
+            <div class="row align-items-center g-lg-5 py-5">
+                <div class="col-lg-7 text-center text-lg-start">
+                    <h1 class="display-5 fw-bold lh-1 text-dark mb-3">Looking for the Perfect Shared Workspace?
+                    </h1>
+                    <p class="col-lg-10 fs-5 text-dark">Discover vibrant, collaborative environments tailored to boost
+                        creativity and
+                        productivity. Find your ideal space today!</p>
+                </div>
+                <div class="col-md-10 mx-auto col-lg-5">
+                    <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <img src="icon6.png" style="width:30px;">
+                            <b class="h5 fw-bold mt-2 text-primary">&nbspPerfectWorkspace</b>
+                        </div>
+                        <br>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="name" placeholder="Username">
+                            <label for="floatingInput">Username</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control" id="password" placeholder="Password">
+                            <label for="floatingPassword">Password</label>
+                        </div>
+                        <button class="w-100 btn btn-lg btn-primary" type="button" onclick="signin()">Sign in</button>
+                        <hr class="my-4">
+                        <small class="text-body-secondary">Don't have an account?&nbsp<a
+                                href="http://localhost:3001/register">Register now</a></small>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const f = fetch('http://localhost:3001/user-name');
+        f.then(response => response.json()).then((json) => {
+            // alert(json.status);
+            if (json.status == "owner") {
+                window.location.replace('http://localhost:3001/owner');
+            } else if (json.status == "coworker") {
+                window.location.replace('http://localhost:3001/coworker');
+            }
+        });
+
+    </script>
+</body>
+
+</html>

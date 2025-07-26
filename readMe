@@ -1,0 +1,63 @@
+<!-- /**
+ * @name: Final Group Project.
+ * @Course Code: SODV1201
+ * @class: Software Development Diploma program.
+ * @author: 457647 - Yosita Jasamut
+ */ -->
+How to start/run the application
+Setup
+1. Go to directory folder "Final-BowSharedWorkspace_Yosita_Jasamut"
+2. Start server by command "node server.js"
+3. Open web browser "http://localhost:3001/"
+
+Signup
+1. Create user account by click on "Register now"
+2. Enter name / email / password / phone / role and click on "submit"
+
+Or Signin
+1. Enter username, password and click on "signin"
+Ex1. username: owner / password: 12345678 
+Ex2. username: coworker / password: 12345678
+
+
+
+
+For owner(Please signin/signup with owner role)
+<!--As an owner, You can list a property with its address, neighborhood, square feet, whether it has a parking
+garage, and whether it is reachable by public transportation.-->
+1. you can add your new property by click on "Add new property"
+2. Enter you property information and click on "Save this property"
+3. After create, your property will show on home page.
+
+<!--As an owner, I can select one of my properties and list workspaces for rent. Workspaces could be
+meeting rooms, private office rooms, or desks in an open work area. For each workspace, I can specify
+how many individuals it can seat, whether smoking is allowed or not, availability date, lease term
+(day, week, or month), and price.-->
+4. you can list your workspaces of your property by click on "Add workspace" button on each property.
+5. Scroll down to bottom of page, you will see workspace form adding.
+6. Enter you workspace information and click on "Add workspace".
+7. After create, your workspace will show on List of workspace.
+8. You can modify or delete any workspace.
+
+<!--As an owner, I can modify the data for any of my properties or any of my workspaces.-->
+9. you can modify your property data on home page by click on "Modify" button on each property.
+
+<!--As an owner, I can delist any of my properties or any of my workspaces.-->
+10. you can delete your property data on home page by click on "Delete" button on each property.
+
+
+
+
+For coworker(Please signin/signup with coworker role)
+<!--As a coworker, I can search for workspaces by address, neighborhood, square feet, with/without
+parking, with/without public transportation, number of individuals it can seat, with/without smoking,
+availability date, lease term, or price.-->
+1. you can filter workspace data by search box and click on "Filter" button
+
+<!--As a coworker, I can select a workspace and view its details.-->
+<!--As a coworker, I can get the contact information of a workspace’s owner.-->
+2. you can view workspace details by click on name of each workspace. it will show the data of workspace includes property information and owner contact.
+
+
+
+

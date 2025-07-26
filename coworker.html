@@ -1,0 +1,183 @@
+<!-- /**
+ * @name: Final Group Project.
+ * @Course Code: SODV1201
+ * @class: Software Development Diploma program.
+ * @author: 457647 - Yosita Jasamut
+ */  -->
+
+<!DOCTYPE html>
+
+<head>
+    <title>Perfect Workspace - Coworker</title>
+    <script src="script.js"></script>
+    <link href="bootstrap-5.3.3/dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: "Nunito", sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary-subtle">
+            <div class="container-fluid container">
+                <a class="navbar-brand fw-bold fs-6 d-flex align-items-center text-primary" href="#"> <img
+                        src="icon6.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
+                    &nbspPerfect Workspace</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active text-dark" aria-current="page"
+                                href="http://localhost:3001/coworker">Home</a>
+                        </li>
+                    </ul>
+                    <span class="navbar-text">
+                        <a class="nav-link text-danger" href="http://localhost:3001/signout">Sign out</a>
+                    </span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <section class="py-5 text-center bg-primary-subtle">
+        <div class="py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto text-primary">
+                <h1 class="fw-bold">Hello, Coworker<br>
+                    <div id="name"></div>
+                </h1>
+                <p class="text-dark">As a coworker, I can search for workspaces by address, neighborhood, square feet,
+                    with/without
+                    parking, with/without public transportation, number of individuals it can seat, with/without
+                    smoking,
+                    availability date, lease term, or price.</p>
+                <p>
+                    <a href="#workspace" class="btn btn-primary my-2">View all workspace</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div id="workspace" class="container py-5">
+
+        <div class="pb-3">
+            <div class="row row-cols-lg-auto g-3 align-items-center bg-body-secondary p-3 rounded">
+                <div class="col-12">
+                    <label class="text-primary" for=""><small>Property name / Address /
+                            Workspace type</small></label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="text" placeholder="Search">
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <label class="text-primary" for="inlineFormSelectPref"><small>Neighborhood</small></label>
+                    <select class="form-select" id="neighborhood">
+                        <option value="">All</option>
+                        <option>Downtown</option>
+                        <option>Residential</option>
+                        <option>Industrial</option>
+                        <option>Major Park</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+
+                <div class="col-12">
+                    <label class="text-primary" for="inlineFormSelectPref"><small>Seats</small></label>
+                    <select class="form-select" id="seats">
+                        <option value="">All</option>
+                        <option value="1">> 1</option>
+                        <option value="10">> 10</option>
+                        <option value="20">> 20</option>
+                    </select>
+                </div>
+
+                <div class="col-12">
+                    <label class="text-primary" for="inlineFormSelectPref"><small>Sqft.</small></label>
+                    <select class="form-select" id="sqft">
+                        <option value="">All</option>
+                        <option value="10">> 10 sqft.</option>
+                        <option value="50">> 50 sqft.</option>
+                        <option value="100">> 100 sqft.</option>
+                    </select>
+                </div>
+
+                <div class="col-12">
+                    <label class="text-primary" for="inlineFormSelectPref"><small>Lease term</small></label>
+                    <select class="form-select" id="lease">
+                        <option value="">All</option>
+                        <option value="1">> 1 day</option>
+                        <option value="10">> 10 days</option>
+                        <option value="30">> 30 days</option>
+                    </select>
+                </div>
+
+                <div class="col-12">
+                    <label class="text-primary" for="inlineFormSelectPref"><small>Price</small></label>
+                    <select class="form-select" id="price">
+                        <option value="">All</option>
+                        <option value="10">> 10 CAD</option>
+                        <option value="50">> 50 CAD</option>
+                        <option value="100">> 100 CAD</option>
+                    </select>
+                </div>
+
+                <div class="text-primary">
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="parking" name="parking">
+                        <label class="form-check-label" for="inlineCheckbox1">parking</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="public_transportation" name="public_transportation">
+                        <label class="form-check-label" for="inlineCheckbox2">public transportation</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="smoking" name="smoking">
+                        <label class="form-check-label" for="inlineCheckbox3">smoking</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="pet" name="pet">
+                        <label class="form-check-label" for="inlineCheckbox2">pet-friendly</label>
+                    </div>
+                </div>
+
+                
+
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary" onclick="workspace_all('filter')">Filter</button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="lists" class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">Loading..</div>
+    </div>
+    <footer>
+        <div class="col text-center py-3">
+         <small class="text-primary">Developed by 457647 - Yosita Jasamut © 2024</small><br>
+         <small><i>Student of Software Development at Bow Valley College</i></small></div>
+     </footer>
+
+    <script src="bootstrap-5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        getusername();
+        workspace_all();
+    </script>
+</body>
+
+</html>
