@@ -62,7 +62,7 @@
                         <button class="w-100 btn btn-lg btn-primary" type="button" onclick="signin()">Sign in</button>
                         <hr class="my-4">
                         <small class="text-body-secondary">Don't have an account?&nbsp<a
-                                href="http://localhost:3001/register">Register now</a></small>
+                                href="/register">Register now</a></small>
                     </form>
                 </div>
             </div>
@@ -71,13 +71,13 @@
 
 
     <script>
-        const f = fetch('http://localhost:3001/user-name');
+        const f = fetch('/user-name');
         f.then(response => response.json()).then((json) => {
             // alert(json.status);
             if (json.status == "owner") {
-                window.location.replace('http://localhost:3001/owner');
+                window.location.replace('/owner');
             } else if (json.status == "coworker") {
-                window.location.replace('http://localhost:3001/coworker');
+                window.location.replace('/coworker');
             }
         });
 

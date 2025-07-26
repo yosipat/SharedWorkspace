@@ -38,11 +38,11 @@
                 <div class="collapse navbar-collapse" id="navbarText">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="http://localhost:3001/owner">Home</a>
+                            <a class="nav-link active" aria-current="page" href="/owner">Home</a>
                         </li>
                     </ul>
                     <span class="navbar-text">
-                        <a class="nav-link text-danger" href="http://localhost:3001/signout">Sign out</a>
+                        <a class="nav-link text-danger" href="/signout">Sign out</a>
                     </span>
                 </div>
             </div>
@@ -78,7 +78,7 @@
 
             </div>
 
-            <form class="needs-validation" id="myForm" novalidate action="http://localhost:3001/workspace-add"
+            <form class="needs-validation" id="myForm" novalidate action="/workspace-add"
                 method="post">
                 <input id="property" name="property" hidden>
                 <div class="bg-primary-subtle w-100" id="addworkspace">
@@ -175,14 +175,14 @@
             document.getElementById('propertyname').innerHTML = name;
             document.getElementById('property').value = name;
 
-            const f = fetch('http://localhost:3001/property-data/' + name);
+            const f = fetch('/property-data/' + name);
             f.then(response => response.json()).then((json) => {
                 document.getElementById('address').innerHTML = json.address;
                 document.getElementById('squarefeet').innerHTML = json.squarefeet;
                 document.getElementById('neighborhood').innerHTML = json.neighborhood;
 
                 username = json.owner;
-                const f2 = fetch('http://localhost:3001/user-data/' + username);
+                const f2 = fetch('/user-data/' + username);
                 f2.then(response2 => response2.json()).then((json2) => {
 
                     // console.log(json2);
@@ -204,7 +204,7 @@
                 workspace_data(name, "owner");
 
                 if (workspace != null) {
-                    const f3 = fetch('http://localhost:3001/workspace-data/' + name + '/' + workspace);
+                    const f3 = fetch('/workspace-data/' + name + '/' + workspace);
                     f3.then(response3 => response3.json()).then((json3) => {
                         document.getElementById('type').value = json3.type;
                         document.getElementById('seats').value = json3.seats;
@@ -224,7 +224,7 @@
                         }
                         document.getElementById('pet').checked = pet;
                         document.getElementById('smoking').checked = smoking;
-                        document.getElementById("myForm").action = "http://localhost:3001/workspace-modify/" + name + "/" + workspace;
+                        document.getElementById("myForm").action = "/workspace-modify/" + name + "/" + workspace;
                     });
                 }
             });

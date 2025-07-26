@@ -37,11 +37,11 @@
                 <div class="collapse navbar-collapse" id="navbarText">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="http://localhost:3001/owner">Home</a>
+                            <a class="nav-link active" aria-current="page" href="/owner">Home</a>
                         </li>
                     </ul>
                     <span class="navbar-text">
-                        <a class="nav-link text-danger" href="http://localhost:3001/signout">Sign out</a>
+                        <a class="nav-link text-danger" href="/signout">Sign out</a>
                     </span>
                 </div>
             </div>
@@ -58,7 +58,7 @@
                 <p class="text-white">This page shows only your properties. As an owner, you can modify,
                     delete, or list any of your properties or any of your workspaces. And list a new property.</p>
                 <p>
-                    <a href="http://localhost:3001/property-add" class="btn btn-primary my-2">Add new property</a>
+                    <a href="/property-add" class="btn btn-primary my-2">Add new property</a>
                     <a href="#property" class="btn btn-secondary my-2">See all properties</a>
                 </p>
             </div>
@@ -110,7 +110,7 @@
 
         
         function getusername() {
-            const f = fetch('http://localhost:3001/user-name');
+            const f = fetch('/user-name');
             f.then(response => response.json()).then((json) => {
                 username = json.name;
                 document.getElementById('name').innerHTML = "(" + username + ")";

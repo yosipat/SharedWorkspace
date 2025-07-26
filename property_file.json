@@ -162,6 +162,16 @@
           "pet": "true"
         }
       ]
+    },
+    {
+      "name": "Wedding",
+      "address": "66 Castlebrook Way NE",
+      "squarefeet": "50",
+      "neighborhood": "Downtown",
+      "parking": "true",
+      "public_transportation": "true",
+      "owner": "owner",
+      "workspace": []
     }
   ]
 }
